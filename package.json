@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/WangTingZheng/CLI#readme",
   "bin": {
-    "nodemcu": "index.js"
+    "nodemcu": "./Server/Client.js"
   }
 }
