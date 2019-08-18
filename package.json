@@ -1,19 +1,23 @@
 {
-  "name": "cli",
+  "name": "CLI",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "要实现的命令：\r ```\r nodemcu do pinMode pin[value] mode[value]  //设置pin引脚的模式为mode\r nodemcu do digitalWrite pin[value] status[value] //\r nodemcu return digitalRead pin[value]\r nodemcu return analogRead pin[value]\r nodemcu do analogWrite pin[value] status[value]\r ```",
+  "main": "index.js",
   "scripts": {
-    "test": "test.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WangTingZheng/CLI.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bin": {
-    "nodemcu": "server.js"
+  "bugs": {
+    "url": "https://github.com/WangTingZheng/CLI/issues"
   },
-  "dependencies": {
-    "commander": "^3.0.0",
-    "turbo-net": "^1.4.0"
+  "homepage": "https://github.com/WangTingZheng/CLI#readme",
+  "bin": {
+    "nodemcu": "index.js"
   }
 }
