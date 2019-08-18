@@ -1,5 +1,5 @@
 {
-  "name": "iconfont-cli",
+  "name": "cli",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
