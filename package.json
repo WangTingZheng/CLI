@@ -19,7 +19,7 @@
   "homepage": "https://github.com/WangTingZheng/CLI#readme",
   "bin": {
     "nodemcu": "index.js",
-    "startServer": "./Server/client.js"
+    "startServer": "./Server/Client.js"
   },
   "dependencies": {
     "commander": "^3.0.0"
