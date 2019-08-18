@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "bin": {
-    "nodemcu": "node server.js"
+    "nodemcu": "server.js"
   },
   "dependencies": {
     "commander": "^3.0.0",
