@@ -1,4 +1,3 @@
-   /*client.js*/
 var net=require('net');
 var stop = false;
 const PORT = 3000;
