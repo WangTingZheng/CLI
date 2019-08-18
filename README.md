@@ -33,7 +33,7 @@ pkg install vim
 git clone https://github.com/wangtingzheng/cli.git
 cd cli
 npm link
-nodemcu
+nodemcu do start
 ```
 
 来开启服务器
