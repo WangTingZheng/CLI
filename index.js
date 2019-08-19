@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 var program = require('commander');
+var json =require('./json.js');
 
 program
   .version('0.1.0')
@@ -18,10 +19,12 @@ program
       client.write("you set analog pin %s to %s",pin,status);
     }
     else if(action=="start"){
+      json.modifyJson(0,0,"true")
       const child_process = require('child_process');
       let subProcess=child_process.exec("startServer",function(err,stdout){
           if(err)console.log(err);
           console.log(stdout);
+          json.modifyJson(0,0,"false")
           subProcess.kill()
       });
     }
