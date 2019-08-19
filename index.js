@@ -2,6 +2,15 @@
 var program = require('commander');
 var json =require('./json.js');
 
+var before={
+  "status":"true",
+  "value":"HIGH"
+}
+var after={
+  "status":"false",
+  "value":"HIGH"
+}
+
 program
   .version('0.1.0')
   .option('-C, --chdir <path>', 'change the working directory')
@@ -19,13 +28,17 @@ program
       client.write("you set analog pin %s to %s",pin,status);
     }
     else if(action=="start"){
-      json.modifyJson(0,0,"true")
+      console.log("running...")
+      json.modifyJson(1,before)
+      console.log("turn on")
       const child_process = require('child_process');
-      let subProcess=child_process.exec("startServer",function(err,stdout){
+      let subProcess=child_process.exec("forever start ./Server/Client.js",function(err,stdout){
           if(err)console.log(err);
           console.log(stdout);
-          json.modifyJson(0,0,"false")
-          subProcess.kill()
+          console.log("process on")
+          json.modifyJson(1,after)
+          console.log("turn off")
+          //subProcess.kill()
       });
     }
   });
