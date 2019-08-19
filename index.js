@@ -13,9 +13,9 @@ program
   .option('-r,--digitalRead  <pin> <status>','do')
   .action(function(action,pin,status){
     if(action=="digital"){
-      
+      client.write("you set digital pin %s to %s",pin,status);
     }else if(action=="analog"){
-
+      client.write("you set analog pin %s to %s",pin,status);
     }
     else if(action=="start"){
       const child_process = require('child_process');
